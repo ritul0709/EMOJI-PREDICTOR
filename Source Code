@@ -1,0 +1,34 @@
+import random
+import time
+
+# List of mood messages
+mood_messages = [
+    ("Happy", "😊", "You're shining bright today!"),
+    ("Sad", "😢", "It's okay to feel low sometimes. Be kind to yourself."),
+    ("Excited", "🤩", "You have some amazing energy today!"),
+    ("Sleepy", "😴", "Maybe a warm nap will fix everything."),
+    ("Angry", "😡", "Take a deep breath… it will pass."),
+    ("Romantic", "😘", "Love is definitely in the air for you."),
+    ("Silly", "🤣", "You’re in a goofy mood — enjoy the chaos!")
+]
+
+print("✨ Welcome to the Emoji Mood Predictor ✨")
+name = input("Enter your name: ")
+
+print("\nReading your aura", end="")
+for _ in range(3):
+    print(".", end="")
+    time.sleep(0.8)
+
+print("\n")
+
+# Choose a random mood
+mood, emoji, message = random.choice(mood_messages)
+
+print("💫 *Mood Report for*", name.upper(), "💫")
+print("-" * (20 + len(name)))
+
+print(f"Your mood today: {mood} {emoji}")
+print("Message:", message)
+
+print("\n🌟 Have a wonderful day ahead,", name + "! 🌟")
